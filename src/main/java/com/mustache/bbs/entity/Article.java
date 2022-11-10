@@ -3,24 +3,29 @@ package com.mustache.bbs.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
-@Entity // JPA에서 객체로 다루겠다는 선언
-@NoArgsConstructor  // 생성자에 모든 변수를 사용하지 않을때 사용
+@Entity
+@Table(name = "article2")
+@NoArgsConstructor
 @Getter
+@SequenceGenerator(
+        name = "BOARD_SEQ_GENERATOR",
+        sequenceName = "BOARD_SEQ",
+        initialValue = 1,
+        allocationSize = 1
+)
 public class Article {
-    @Id     // PK값이 무엇인지 구별하기 위해 꼭 붙여야함
-    @GeneratedValue     // ID를 직접 생성하지 않고 자동으로 생성하도록 한 경우 붙힘
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE,
+            generator = "BOARD_SEQ_GENERATOR")
     private Long id;
 
     private String title;
-    private String contents;
+    private String content;
 
-    public Article(String title, String contents) {
+    public Article(String title,String content) {
         this.title = title;
-        this.contents = contents;
+        this.content = content;
     }
 }
