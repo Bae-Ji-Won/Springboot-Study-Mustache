@@ -1,0 +1,14 @@
+{{>layouts/header}}
+<div class="card" style="width: 18rem;">
+    {{#article}}
+    <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{id}}</h6>
+        <p class="card-text">{{content}} </p>
+        <a href="/articles/new">new articles</a>
+        <a href="/articles">list articles</a>
+    </div>
+    {{/article}}
+</div>
+{{>layouts/footer}}
+
