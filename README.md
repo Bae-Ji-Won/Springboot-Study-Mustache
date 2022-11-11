@@ -1,6 +1,9 @@
 ### 🦁 멋쟁이사자처럼 백엔드
 
 # 🗓 공부 일정
+
+📄 실습 정리 블로그 : https://velog.io/@qowl880/series/%EC%9E%90%EB%B0%94-%EC%8B%A4%EC%8A%B5
+
 - 2022-11-07 : Springboot + Mustache + JPA 연동 Mustache + JPA부터 새로운 레포지스토리 사용
 
 - 2022-11-08 : JPA DB연동하여 유저한테 값 입력 받아 저장하기, DB에 저장되어 있는 값 읽어 View 출력
