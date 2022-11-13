@@ -1,23 +1,18 @@
 package com.mustache.bbs.Domain;
 
 import com.mustache.bbs.entity.Article;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
+@Setter
 @ToString
+@AllArgsConstructor
 public class ArticleDto {
     private Long id;
     private String title;
     private String content;
 
-    public ArticleDto(Long id, String title,String content) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-    }
-
     public Article toEntity(){
-        return new Article(this.title,this.content);
+        return new Article(this.id,this.title,this.content);
     }
 }
