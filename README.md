@@ -6,7 +6,7 @@
 
 - 2022-11-07 : Springboot + Mustache + JPA 연동 Mustache + JPA부터 새로운 레포지스토리 사용
 
-- 2022-11-08 : JPA DB연동하여 유저한테 값 입력 받아 저장하기, DB에 저장되어 있는 값 읽어 View 출력
+- 2022-11-08 : JPA DB연동하여 유저한테 값 입력 받아 저장하기, DB에 저장되어 있는 값 읽어 View 출력 (Create/Read)
 
 - 2022-11-09 : 지금까지 만든 프로젝트 Docker Container를 통해 AWS EC2 서버로 
 <br />
