@@ -10,7 +10,7 @@
 
 - 2022-11-09 : JPA DB연동하여 기존의 데이터 수정하고 삭제하기(Update/Delete)
 
-- 2022-11-10 : 지금까지 만든 프로젝트 Docker Container를 통해 AWS EC2 서버로 
+- 2022-11-10 : 지금까지 만든 프로젝트 Docker Container를 통해 AWS EC2 서버로 띄우기
 <br />
 
 # ⚙️ 기술 스택
