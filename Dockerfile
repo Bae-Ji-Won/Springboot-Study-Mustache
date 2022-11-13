@@ -25,5 +25,5 @@ ENTRYPOINT [                                                \
    "-jar",                                                 \
    "-Djava.security.egd=file:/dev/./urandom",              \
    "-Dsun.net.inetaddr.ttl=0",                             \
-   "bbs-0.0.1-SNAPSHOT.jar"              \
+   "bbs-0.0.1-SNAPSHOT.jar"                  \
 ]
