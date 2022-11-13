@@ -1,14 +1,17 @@
 {{>layouts/header}}
+{{#article}}
 <div class="card" style="width: 18rem;">
-    {{#article}}
+
     <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{id}}</h6>
         <p class="card-text">{{content}} </p>
-        <a href="/articles/new">new articles</a>
-        <a href="/articles">list articles</a>
+        <button type="button" class="btn btn-outline-success"><a href="/articles/new">새로만들기</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="/articles">리스트 출력</a></button>
     </div>
-    {{/article}}
 </div>
+<button type="button" class="btn btn-danger"><a href="/articles/{{id}}/edit">수정</a></button>
+<button type="button" class="btn btn-danger"><a href="/articles/{{id}}/delete">삭제</a></button>
+{{/article}}
 {{>layouts/footer}}
 
