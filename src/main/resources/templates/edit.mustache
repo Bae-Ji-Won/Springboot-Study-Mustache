@@ -1,0 +1,15 @@
+<div>
+    edit page 입니다.
+    {{#article}}
+        <form action="/articles/{{id}}/update" method="post">
+            <!-- update 컨트롤러에 id,title,content값을 넘겨줘야 하기 때문에 id는 hidden으로 따로 저장함
+                 만약 프론트 말고 백에서 처리하고 싶다면 setter를 통해 dto의 id값을 초기화 시켜주면 된다. -->
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="text" name="title" value="{{title}}"/>
+            <textarea rows="3"  name="content" >{{content}}</textarea>
+            <input type="submit"/>
+        </form>
+    <a href="/articles/{{id}}"> 상세페이지</a>
+    <a href="/articles/list"> 메인화면</a>
+    {{/article}}
+</div>
