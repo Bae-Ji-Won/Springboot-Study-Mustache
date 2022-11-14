@@ -1,6 +1,6 @@
 package com.mustache.bbs.repository;
 
-import com.mustache.bbs.entity.Article;
+import com.mustache.bbs.Domain.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // DAO의 추상화 버전
