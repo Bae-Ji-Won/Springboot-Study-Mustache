@@ -1,8 +1,8 @@
 package com.mustache.bbs.Controller;
 
 
-import com.mustache.bbs.Domain.ArticleDto;
-import com.mustache.bbs.entity.Article;
+import com.mustache.bbs.Domain.Dto.ArticleDto;
+import com.mustache.bbs.Domain.Article;
 import com.mustache.bbs.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -31,7 +31,7 @@ public class ArticleController {
     // 데이터 입력 페이지 이동
     @GetMapping("/new")
     public String newArticleForm(){
-        return "new";
+        return "articles/new";
     }
 
     // 사용자에게 입력받은 데이터를 articledto를 통해 DTO에 저장하고 난후 toEntity를 통해 entity클래스에
@@ -49,7 +49,7 @@ public class ArticleController {
     public String list(Model model){
         List<Article> articleList = articleRepository.findAll();
         model.addAttribute("articles", articleList);
-        return "list";
+        return "articles/list";
     }
 
     // 아무것도 입력받지 않으면 /articles/list로 이동
@@ -66,9 +66,9 @@ public class ArticleController {
 
         if(!optArticle.isEmpty()) { // 데이터가 있다면
             model.addAttribute("article", optArticle.get());   // model에 id에 해당하는 title, content 데이터를 저장함
-            return "show";
+            return "articles/show";
         }else {                     // 데이터가 null이라면
-            return "error";
+            return "articles/error";
         }
     }
 
@@ -81,10 +81,10 @@ public class ArticleController {
         if(!optionArticle.isEmpty()){
             model.addAttribute("article",optionArticle.get());
             log.info(String.valueOf(optionArticle));
-            return "edit";
+            return "articles/edit";
         }else{
             model.addAttribute("errormessage",String.format("%d가 없습니다",id));
-            return "error";
+            return "articles/error";
         }
     }
 
