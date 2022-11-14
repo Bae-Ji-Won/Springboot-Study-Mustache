@@ -1,4 +1,4 @@
-package com.mustache.bbs.entity;
+package com.mustache.bbs.Domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
