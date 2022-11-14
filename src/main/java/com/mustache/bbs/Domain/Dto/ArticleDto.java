@@ -1,6 +1,6 @@
-package com.mustache.bbs.Domain;
+package com.mustache.bbs.Domain.Dto;
 
-import com.mustache.bbs.entity.Article;
+import com.mustache.bbs.Domain.Article;
 import lombok.*;
 
 @Getter
