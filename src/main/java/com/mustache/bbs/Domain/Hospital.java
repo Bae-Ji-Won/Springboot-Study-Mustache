@@ -1,5 +1,6 @@
 package com.mustache.bbs.Domain;
 
+import com.mustache.bbs.Domain.Dto.HospitalResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,8 +25,17 @@ public class Hospital {
     @Column(name = "full_address")
     private String fulladdress;     // cammel 형식으로 작성시 자동으로 DB에 _ 형식으로 들어감 fullAddress => full_address
 
-//    public static Hospital of(Integer id) {
-//        return Hospital.builder().id(id).build();
+//    @Column(name = "business_type_name")
+//    private String businesstypename;
+//
+//    @Column(name = "road_name_address")
+//    private String roadNameAddress;     // DB에서 road_name_address를 의미
+//
+//    @Column(name = "patient_room_count")
+//    private Integer patientroomcount;   // patient_room_count
+//
+//    public static HospitalResponse of(Hospital hospital) {
+//        return new HospitalResponse(hospital.getId(), hospital.getHospitalname(),hospital.getRoadNameAddress());
 //    }
 
 }
