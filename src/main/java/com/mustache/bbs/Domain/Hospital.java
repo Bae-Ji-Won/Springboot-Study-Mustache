@@ -40,6 +40,8 @@ public class Hospital {
     @Column(name = "total_area_size")
     private Float totalareasize;
 
+    @Column(name = "business_status_code")
+    private Integer businessstatuscode;
 
     // HospitalEntity를 HospitalResponse DTO로 만들어주는 부분
     public static HospitalResponse of(Hospital hospital) {

@@ -2,7 +2,8 @@ package com.mustache.bbs.Controller;
 
 import com.mustache.bbs.Domain.Dto.HospitalResponse;
 import com.mustache.bbs.Domain.Hospital;
-import com.mustache.bbs.repository.HospitalRepository;
+import com.mustache.bbs.Service.HospitalRestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,18 +14,20 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/hospitals")
+@Slf4j
 public class HospitalRestController {
 
-    private final HospitalRepository hospitalRepository;
+    private final HospitalRestService hospitalRestService;
 
-    public HospitalRestController(HospitalRepository hospitalRepository) {
-        this.hospitalRepository = hospitalRepository;
+    public HospitalRestController(HospitalRestService hospitalRestService) {
+        this.hospitalRestService = hospitalRestService;
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<HospitalResponse> get(@PathVariable Integer id){
-        Optional<Hospital> hospital = hospitalRepository.findById(id); // Entity
-        HospitalResponse hospitalResponse = Hospital.of(hospital.get()); // DTO
+        HospitalResponse hospitalResponse = hospitalRestService.getHospital(id);
+        log.info(String.valueOf(hospitalResponse));
         return ResponseEntity.ok().body(hospitalResponse); // Return은 DTO로
     }
 }
