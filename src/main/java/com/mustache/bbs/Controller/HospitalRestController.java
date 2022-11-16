@@ -17,8 +17,8 @@ import java.util.Optional;
 @Slf4j
 public class HospitalRestController {
 
-    private final HospitalRestService hospitalRestService;
-
+    private final HospitalRestService hospitalRestService;      // service와 의존
+  
     public HospitalRestController(HospitalRestService hospitalRestService) {
         this.hospitalRestService = hospitalRestService;
     }
@@ -26,8 +26,6 @@ public class HospitalRestController {
 
     @GetMapping("/{id}")
     public ResponseEntity<HospitalResponse> get(@PathVariable Integer id){
-        HospitalResponse hospitalResponse = hospitalRestService.getHospital(id);
-        log.info(String.valueOf(hospitalResponse));
-        return ResponseEntity.ok().body(hospitalResponse); // Return은 DTO로
+        return ResponseEntity.ok().body(hospitalRestService.getHospital(id)); // Return은 DTO로
     }
 }
