@@ -33,9 +33,19 @@ public class Hospital {
 
     @Column(name = "patient_room_count")
     private Integer patientroomcount;   // patient_room_count
-//
-//    public static HospitalResponse of(Hospital hospital) {
-//        return new HospitalResponse(hospital.getId(), hospital.getHospitalname(),hospital.getRoadNameAddress());
-//    }
 
+    @Column(name = "total_number_of_beds")
+    private Integer totalnumberofbeds;
+
+    @Column(name = "total_area_size")
+    private Float totalareasize;
+
+
+    // HospitalEntity를 HospitalResponse DTO로 만들어주는 부분
+    public static HospitalResponse of(Hospital hospital) {
+        return new HospitalResponse(hospital.getId(),
+                hospital.getRoadNameAddress(),hospital.getHospitalname(),
+                hospital.getPatientroomcount(),hospital.getTotalnumberofbeds(),
+                hospital.getBusinesstypename(),hospital.getTotalareasize());
+    }
 }
