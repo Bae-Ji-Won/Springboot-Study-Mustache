@@ -1,13 +1,14 @@
 package com.mustache.bbs.Domain.Dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Builder
 // Json을 위한 DTO
 public class HospitalResponse {
     private Integer id;
@@ -18,7 +19,6 @@ public class HospitalResponse {
     private String businesstypename;
     private Float totalareasize;
     private String businessstatuscode;
-
 
 
     // businessStatuesName을 제외한 생성자 생성
@@ -38,5 +38,7 @@ public class HospitalResponse {
     public void setBusinessstatuscode(String businessstatuscode) {
         this.businessstatuscode = businessstatuscode;
     }
+
+
 
 }
