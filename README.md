@@ -35,6 +35,7 @@
 <div>
   <img alt="Amazon AWS" src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white"/>
   <img alt="Amazon EC2" src="https://img.shields.io/badge/Amazon EC2-FF4F8B?style=for-the-badge&logo=Amazon EC2&logoColor=white"/>
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"/>
 </div>
 
 
