@@ -17,6 +17,8 @@
 - 2022-11-14 : JPQL을 통해 JPA안에서도 Query문을 만들어 원하는 데이터 호출
 
 - 2022-11-15 : JSON 형식 반환, 레이어드 아키텍처 형식 구현, WebMvcTest(ControllerTest)
+
+- 2022-11-16 : JSON 형태 입력받고 Json형태로 반환하기, Json형식 Controller TestCase
 <br />
 
 # ⚙️ 기술 스택
