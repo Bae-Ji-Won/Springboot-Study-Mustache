@@ -1,7 +1,7 @@
 {{>layouts/header}}
 <form action="/hospital/search" method="get">
 
-    {{#keyword}}    <!-- 키워드 값이 있을경우 keyword  칸안에 데이터 입력 -->
+    {{#keyword}}    <!-- 키워드 값이 있을경우 keyword    칸안에 데이터 입력 -->
         위치검색 <input type="search" name="keyword" value="{{keyword}}">
     {{/keyword}}
     {{^keyword}}
