@@ -1,4 +1,15 @@
 {{>layouts/header}}
+<form action="/hospital/search" method="get">
+
+    {{#keyword}}    <!-- 키워드 값이 있을경우 keyword  칸안에 데이터 입력 -->
+        위치검색 <input type="search" name="keyword" value="{{keyword}}">
+    {{/keyword}}
+    {{^keyword}}
+        위치검색 <input type="search" name="keyword">
+    {{/keyword}}
+    <button class="btn btn-outline-success" type="submit">Search</button>
+    </p>
+</form>
 <table class="table">
     <thead>
     <tr>
@@ -19,12 +30,25 @@
 </table>
 
 <ul class="pagination justify-content-center">
+    <!-- 검색(키워드)가 없이 그냥 전체 리스트 출력일 경우 -->
+    {{^keyword}}
     <li class="page-item">
         <a class="page-link" href="?page={{previous}}">Previous</a>
     </li>
     <li class="page-item">
         <a class="page-link" href="?page={{next}}">Next</a>
     </li>
+    {{/keyword}}
+
+    <!-- 검색키워드를 포함한 리스트 출력일 경우 -->
+    {{#keyword}}
+    <li class="page-item">
+        <a class="page-link" href="?page={{previous}}&keyword={{keyword}}">Previous</a>
+    </li>
+    <li class="page-item">
+        <a class="page-link" href="?page={{next}}&keyword={{keyword}}">Next</a>
+    </li>
+    {{/keyword}}
 </ul>
 
 {{>layouts/footer}}
