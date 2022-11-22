@@ -2,6 +2,7 @@ package com.mustache.bbs.Domain;
 
 import com.mustache.bbs.Domain.Dto.HospitalResponse;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Getter
 @Table(name = "nation_wide_hospitals")
+@Builder
 public class Hospital {
     @Id
     private Integer id;
