@@ -17,6 +17,8 @@
 - 2022-11-14 : JPQL을 통해 JPA안에서도 Query문을 만들어 원하는 데이터 호출
 
 - 2022-11-15 : JSON 형식 반환, 레이어드 아키텍처 형식 구현, WebMvcTest(ControllerTest)
+
+- 2022-11-16 : JSON 형태 입력받고 Json형태로 반환하기, Json형식 Controller TestCase
 <br />
 
 # ⚙️ 기술 스택
@@ -33,6 +35,7 @@
 <div>
   <img alt="Amazon AWS" src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=Amazon AWS&logoColor=white"/>
   <img alt="Amazon EC2" src="https://img.shields.io/badge/Amazon EC2-FF4F8B?style=for-the-badge&logo=Amazon EC2&logoColor=white"/>
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"/>
 </div>
 
 
