@@ -19,6 +19,10 @@
 - 2022-11-15 : JSON 형식 반환, 레이어드 아키텍처 형식 구현, WebMvcTest(ControllerTest)
 
 - 2022-11-16 : JSON 형태 입력받고 Json형태로 반환하기, Json형식 Controller TestCase
+
+- 2022-11-17 : JSON 요청,반환 / TestCase 복습
+
+- 2022-11-18 : 대용량 데이터에 검색 기능 추가
 <br />
 
 # ⚙️ 기술 스택
