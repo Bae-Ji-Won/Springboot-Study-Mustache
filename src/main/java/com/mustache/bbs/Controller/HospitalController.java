@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -31,4 +32,17 @@ public class HospitalController {
         model.addAttribute("next",pageable.next().getPageNumber());
         return "hospital/list";
     }
+
+    @GetMapping("/search")
+    public String searchlist(@RequestParam String keyword, Pageable pageable, Model model){
+        log.info("검색 키워드 :"+keyword);
+        Page<Hospital> hospitals = hospitalService.searchname(pageable,keyword);
+        model.addAttribute("hospitals",hospitals);
+        model.addAttribute("keyword",keyword);
+        model.addAttribute("previous",pageable.previousOrFirst().getPageNumber());
+        model.addAttribute("next",pageable.next().getPageNumber());
+
+        return "hospital/list";
+    }
+
 }
