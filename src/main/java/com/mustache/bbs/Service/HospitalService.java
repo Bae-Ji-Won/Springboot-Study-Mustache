@@ -6,6 +6,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HospitalService {
 
@@ -17,5 +19,10 @@ public class HospitalService {
 
     public Page<Hospital> getHospitalList(Pageable pageable){
         return hospitalRepository.findAll(pageable);
+    }
+
+    // 검색 기능
+    public Page<Hospital> searchname(Pageable pageable, String keyword){
+        return hospitalRepository.findByRoadNameAddressContaining(pageable, keyword);
     }
 }
