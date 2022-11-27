@@ -24,8 +24,12 @@
 
 - 2022-11-18 : 대용량 데이터에 검색 기능 추가
 
-- 2022-11-23 : JPA DB 관계형으로 만들기 연습(Join)<br>
-다른 Repository 사용 https://github.com/Bae-Ji-Won/springboot-jpa
+-------------------- 새 프로젝트를 만들어서 관계형 DB 구조로 만드는 실습 진행 --------------------<br>
+다른 Repository 사용 https://github.com/Bae-Ji-Won/springboot-jpa<br>
+
+- 2022-11-23 : JPA DB 관계형으로 만들기 연습(Join)
+
+- 2022-11-24 : 리뷰기능 만들어보기(관계형 DB구조)
 <br />
 
 # ⚙️ 기술 스택
